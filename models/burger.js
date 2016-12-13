@@ -1,7 +1,11 @@
 var orm = require("../config/orm.js");
 
 var burger = {
-	DUMMYKEY: "DUMMYVALUE"
+	all: function(callback) {
+		orm.selectAll(function(res) {
+			callback(res);
+		}); 
+	}
 	//ORM METHODS GO HERE, refer to cat.js in 8_1 10-CatsAppProblem
 };
 
