@@ -4,7 +4,6 @@ var router = express.Router();
 
 var burger = require("../models/burger.js");
 
-//REFER TO catsController.js 8_1 10
 router.get("/", function(req, res) {
 	burger.all(function(data) {
 		console.log(data);
@@ -13,8 +12,6 @@ router.get("/", function(req, res) {
 });
 
 router.post("/burgers/create", function(req, res) {
-	console.log(req.body);
-	console.log("req body name: " + req.body.name);
 
 	burger.create(req.body.name, function(data) {
 		console.log(data);
@@ -23,7 +20,6 @@ router.post("/burgers/create", function(req, res) {
 });
 
 router.put("/burgers/update/:id", function(req, res) {
-	console.log("req params id: " + req.params.id);
 
 	burger.devour(req.params.id, function(data) {
 		console.log(data);

@@ -16,7 +16,6 @@ var burger = {
 			callback(res);
 		});
 	}
-	//ORM METHODS GO HERE, refer to cat.js in 8_1 10-CatsAppProblem
 };
 
 module.exports = burger;
