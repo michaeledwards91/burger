@@ -8,7 +8,12 @@
 	</div>
 
 	<div class="row">
-		<div class="col-lg-6">
+
+		<div class="col-lg-3">
+			{{!-- empty div --}}
+		</div>
+
+		<div class="col-lg-3">
 			{{!-- not devoured burgers --}}
 			<div class="notDevoured">
 				<ul>
@@ -21,7 +26,7 @@
 				          <input type="hidden" name="devoured" value="true">
 				          <button type="submit">Devour</button>
 				        </form>
-
+				        
 				      </li>
 				    {{/unless}}
 				  {{/each}}
@@ -29,7 +34,7 @@
 			</div>
 
 		</div>
-		<div class="col-lg-6">
+		<div class="col-lg-3">
 			{{!-- devoured burgers --}}
 
 			<div class="devoured">
@@ -47,8 +52,12 @@
 				</ul>
 			</div>
 
-
 		</div>
+
+		<div class="col-lg-3">
+			{{!-- empty div --}}
+		</div>
+
 	</div>
 
 	<div class="row">

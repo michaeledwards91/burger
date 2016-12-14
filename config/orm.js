@@ -11,11 +11,36 @@ var orm = {
 			callback(result);
 		});
 	},
-	insertOne: function() {
+	insertOne: function(burgerName, callback) {
 		console.log("insert one");
+		var queryString = "INSERT INTO burgers (burger_name, devoured) VALUES (";
+		queryString += "'"+burgerName+"'";
+		queryString += ", " + false + ");";
+		console.log(queryString);
+
+		connection.query(queryString, function(err, result) {
+			if (err) throw err;
+
+			callback(result);
+		});
 	},
-	updateOne: function() {
+	updateOne: function(id, callback) {
 		console.log("update one");
+		var queryString = "UPDATE burgers";
+
+	    queryString += " SET ";
+	    queryString += "devoured = 1";
+	    queryString += " WHERE ";
+	    queryString += "id = " + id;
+
+	    console.log(queryString);
+	    connection.query(queryString, function(err, result) {
+	      if (err) {
+	        throw err;
+	      }
+
+	      callback(result);
+	    });
 	}
 };
 

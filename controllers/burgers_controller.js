@@ -12,4 +12,23 @@ router.get("/", function(req, res) {
 	});
 });
 
+router.post("/burgers/create", function(req, res) {
+	console.log(req.body);
+	console.log("req body name: " + req.body.name);
+
+	burger.create(req.body.name, function(data) {
+		console.log(data);
+		res.redirect("/");
+	});
+});
+
+router.put("/burgers/update/:id", function(req, res) {
+	console.log("req params id: " + req.params.id);
+
+	burger.devour(req.params.id, function(data) {
+		console.log(data);
+		res.redirect("/");
+	});
+});
+
 module.exports = router;

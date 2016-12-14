@@ -8,6 +8,9 @@ body {
 .burgerInput {
 	text-align: center;
 }
-.notDevoured {
-	text-align: center;
+.notDevoured form {
+	display: inline;
+}
+.notDevoured li {
+	margin: 5px;
 }
